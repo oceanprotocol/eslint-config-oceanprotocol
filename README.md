@@ -4,8 +4,8 @@
 
 > 💅 Sharable ESLint config for keeping JavaScript consistent across all of Ocean Protocol's projects, built upon [JavaScript Standard Style](https://github.com/standard/standard).
 
+[![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 [![npm](https://img.shields.io/npm/v/eslint-config-oceanprotocol.svg)](https://www.npmjs.com/package/eslint-config-oceanprotocol)
-[![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-141414.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 [![Build Status](https://travis-ci.com/oceanprotocol/eslint-config-oceanprotocol.svg?branch=master)](https://travis-ci.com/oceanprotocol/eslint-config-oceanprotocol)
 
 This cat clearly forgot to lint her JavaScript before deployment:
@@ -16,8 +16,10 @@ Don't be like that cat.
 
 ## Usage
 
+For every project containing JavaScript, ESLint should be set up with this config. For this you need to install all required `peerDependencies` on your own. In one handy command:
+
 ```bash
-npm install --save-dev eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
+npm install --save-dev eslint-config-oceanprotocol eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
 ```
 
 ```json
@@ -28,10 +30,10 @@ npm install --save-dev eslint-config-standard eslint-plugin-standard eslint-plug
 
 ### React
 
-When using within a React project use these commands to get set up:
+When using within a React project use this to get set up:
 
 ```bash
-npm install --save-dev eslint-config-standard eslint-config-standard-react eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
+npm install --save-dev eslint-config-oceanprotocol eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
 ```
 
 ```json
