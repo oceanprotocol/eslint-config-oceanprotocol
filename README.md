@@ -2,7 +2,7 @@
 
 <h1 align="center">eslint-config-oceanprotocol</h1>
 
-> 💅 Sharable ESLint config for keeping JavaScript consistent across all of Ocean Protocol's projects, built upon [JavaScript Standard Style](https://github.com/standard/standard).
+> 💅 🦋 Shareable ESLint config for keeping JavaScript consistent across all of Ocean Protocol's projects, built upon [JavaScript Standard Style](https://github.com/standard/standard).
 
 [![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 [![npm](https://img.shields.io/npm/v/eslint-config-oceanprotocol.svg)](https://www.npmjs.com/package/eslint-config-oceanprotocol)
@@ -63,6 +63,7 @@ We keep it simple and follow almost everything defined in the [JavaScript Standa
 
 - indentation: **4**
 - **no** space before function parenthesis
+- **double quotes** for jsx attributes
 
 ## Development
 
