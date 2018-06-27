@@ -38,6 +38,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oceanprotocol/eslint-config-oceanprotocol"
+    "url": "git+https://github.com/oceanprotocol/eslint-config-oceanprotocol.git"
   }
 }
