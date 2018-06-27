@@ -14,6 +14,17 @@ This cat clearly forgot to lint her JavaScript before deployment:
 
 Don't be like that cat.
 
+## Table of Contents
+
+  - [Usage](#usage)
+     - [React](#react)
+  - [Rules](#rules)
+  - [Development](#development)
+  - [npm releases](#npm-releases)
+  - [License](#license)
+
+---
+
 ## Usage
 
 For every project containing JavaScript, ESLint should be set up with this config. For this you need to install all required `peerDependencies` on your own. In one handy command:
