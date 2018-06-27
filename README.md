@@ -94,6 +94,12 @@ For a new **patch release**, execute on the machine where you're logged into you
 npm run release
 ```
 
+In case you have 2FA setup on npm.js, pass a code as One Time Password:
+
+```bash
+npm run release --otp <yourcode>
+```
+
 Command is powered by [`release-it`](https://github.com/webpro/release-it) package, defined in the `package.json`.
 
 That's what the command does without any user interaction:
