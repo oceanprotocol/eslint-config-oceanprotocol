@@ -22,6 +22,8 @@ For every project containing JavaScript, ESLint should be set up with this confi
 npm install --save-dev eslint-config-oceanprotocol eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
 ```
 
+Then, create a new file `.eslintrc` in the root of your project and fill with:
+
 ```json
 {
   "extends": "oceanprotocol"
@@ -35,6 +37,8 @@ When using within a React project use this to get set up:
 ```bash
 npm install --save-dev eslint-config-oceanprotocol eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
 ```
+
+And in your `.eslintrc`:
 
 ```json
 {
