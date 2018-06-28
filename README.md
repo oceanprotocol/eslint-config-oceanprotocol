@@ -64,6 +64,7 @@ We keep it simple and follow almost everything defined in the [JavaScript Standa
 - indentation: **4**
 - **no** space before function parenthesis
 - **double quotes** for jsx attributes
+- prefer destructuring from objects & arrays
 
 ## Development
 
