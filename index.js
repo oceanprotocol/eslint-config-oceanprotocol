@@ -18,6 +18,10 @@ module.exports = {
             }
         }, {
             enforceForRenamedProperties: false
-        }]
+        }],
+
+        // Enforce consistent spacing inside braces
+        // https://eslint.org/docs/rules/object-curly-spacing
+        'object-curly-spacing': ['error', 'always']
     }
 }
