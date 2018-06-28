@@ -18,6 +18,7 @@ Don't be like that cat.
 
   - [Usage](#usage)
      - [React](#react)
+     - [Editor Plugins](#editor-plugins)
   - [Rules](#rules)
   - [Development](#development)
   - [npm releases](#npm-releases)
@@ -30,7 +31,7 @@ Don't be like that cat.
 For every project containing JavaScript, ESLint should be set up with this config. For this you need to install all required `peerDependencies` on your own. In one handy command:
 
 ```bash
-npm install --save-dev eslint-config-oceanprotocol eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
+npm install --save-dev eslint eslint-config-oceanprotocol eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
 ```
 
 Then, create a new file `.eslintrc` in the root of your project and fill with:
@@ -46,7 +47,7 @@ Then, create a new file `.eslintrc` in the root of your project and fill with:
 When using within a React project use this to get set up:
 
 ```bash
-npm install --save-dev eslint-config-oceanprotocol eslint-config-standard eslint-config-standard-react eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
+npm install --save-dev eslint eslint-config-oceanprotocol eslint-config-standard eslint-config-standard-react eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
 ```
 
 And in your `.eslintrc`:
@@ -56,6 +57,17 @@ And in your `.eslintrc`:
   "extends": ["oceanprotocol", "oceanprotocol/react"]
 }
 ```
+
+### Editor Plugins
+
+For maximum fun during coding, install an ESLint plugin in your favorite editor to get suggestions and autofixes as you type.
+
+- VS Code: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- Atom: [linter-eslint](https://atom.io/packages/linter-eslint)
+- PyCharm: [Installing, enabling, and configuring ESLint in PyCharm](https://www.jetbrains.com/help/pycharm/eslint.html)
+- Sublime Text: [SublimeLinter-eslint](https://github.com/SublimeLinter/SublimeLinter-eslint)
+- IntelliJ IDEA, RubyMine, WebStorm, PhpStorm, PyCharm, AppCode, Android Studio: [ESLint](https://plugins.jetbrains.com/plugin/7494-eslint)
+- Vim, NeoVim: [ALE](https://github.com/w0rp/ale)
 
 ## Rules
 
