@@ -1,5 +1,8 @@
 module.exports = {
-    extends: 'standard',
+    extends: [
+        'eslint:recommended',
+        'standard'
+    ],
 
     rules: {
         'indent': [2, 4, { 'SwitchCase': 1, 'VariableDeclarator': 1 }],
