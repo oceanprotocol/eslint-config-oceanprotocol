@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ef6a974bc0344ba39b378bf33a8dc689)](https://app.codacy.com/app/ocean-protocol/eslint-config-oceanprotocol?utm_source=github.com&utm_medium=referral&utm_content=oceanprotocol/eslint-config-oceanprotocol&utm_campaign=badger)
 [![banner](https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png)](https://oceanprotocol.com)
 
 <h1 align="center">eslint-config-oceanprotocol</h1>
