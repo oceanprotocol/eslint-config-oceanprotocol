@@ -6,7 +6,9 @@
 
 [![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 [![npm](https://img.shields.io/npm/v/eslint-config-oceanprotocol.svg)](https://www.npmjs.com/package/eslint-config-oceanprotocol)
-[![Build Status](https://travis-ci.com/oceanprotocol/eslint-config-oceanprotocol.svg?branch=master)](https://travis-ci.com/oceanprotocol/eslint-config-oceanprotocol) [![Greenkeeper badge](https://badges.greenkeeper.io/oceanprotocol/eslint-config-oceanprotocol.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.com/oceanprotocol/eslint-config-oceanprotocol.svg?branch=master)](https://travis-ci.com/oceanprotocol/eslint-config-oceanprotocol)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ef6a974bc0344ba39b378bf33a8dc689)](https://app.codacy.com/app/ocean-protocol/eslint-config-oceanprotocol?utm_source=github.com&utm_medium=referral&utm_content=oceanprotocol/eslint-config-oceanprotocol&utm_campaign=badger)
+[![Greenkeeper badge](https://badges.greenkeeper.io/oceanprotocol/eslint-config-oceanprotocol.svg)](https://greenkeeper.io/)
 
 This cat clearly forgot to lint her JavaScript before deployment:
 
