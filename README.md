@@ -33,7 +33,7 @@ Don't be like that cat.
 For every project containing JavaScript, ESLint should be set up with this config. For this you need to install all required `peerDependencies` on your own. In one handy command:
 
 ```bash
-npm install --save-dev eslint eslint-config-oceanprotocol eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
+npm install --save-dev eslint eslint-config-oceanprotocol eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-security
 ```
 
 Then, create a new file `.eslintrc` in the root of your project and fill with:
@@ -49,7 +49,7 @@ Then, create a new file `.eslintrc` in the root of your project and fill with:
 When using within a React project use this to get set up:
 
 ```bash
-npm install --save-dev eslint eslint-config-oceanprotocol eslint-config-standard eslint-config-standard-react eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
+npm install --save-dev eslint eslint-config-oceanprotocol eslint-config-standard eslint-config-standard-react eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-security eslint-plugin-react
 ```
 
 And in your `.eslintrc`:

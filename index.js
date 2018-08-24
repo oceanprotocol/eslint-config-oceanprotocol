@@ -1,5 +1,10 @@
 module.exports = {
-    extends: 'standard',
+    extends: [
+        'plugin:security/recommended',
+        'standard'
+    ],
+
+    'plugins': ['security'],
 
     rules: {
         'indent': [2, 4, { 'SwitchCase': 1, 'VariableDeclarator': 1 }],

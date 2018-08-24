@@ -7,7 +7,8 @@ const reactRules = {
 }
 
 module.exports = {
-    extends: ['standard', 'standard-react'],
+    extends: ['plugin:security/recommended', 'standard', 'standard-react'],
+    'plugins': ['security'],
 
     rules: Object.assign({}, base.rules, reactRules)
 }
