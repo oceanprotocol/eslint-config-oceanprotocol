@@ -1,8 +1,11 @@
 module.exports = {
     extends: [
         'eslint:recommended',
+        'plugin:security/recommended',
         'standard'
     ],
+
+    'plugins': ['security'],
 
     rules: {
         'indent': [2, 4, { 'SwitchCase': 1, 'VariableDeclarator': 1 }],
