@@ -7,7 +7,13 @@ const reactRules = {
 }
 
 module.exports = {
-    extends: ['plugin:security/recommended', 'standard', 'standard-react'],
+    extends: [
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:security/recommended',
+        'standard',
+        'standard-react'
+    ],
     'plugins': ['security'],
 
     rules: Object.assign({}, base.rules, reactRules)
