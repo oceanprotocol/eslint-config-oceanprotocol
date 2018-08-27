@@ -28,6 +28,10 @@ module.exports = {
 
         // Enforce consistent spacing inside braces
         // https://eslint.org/docs/rules/object-curly-spacing
-        'object-curly-spacing': ['error', 'always']
+        'object-curly-spacing': ['error', 'always'],
+
+        // Disable detect-object-injection
+        // https://github.com/nodesecurity/eslint-plugin-security/issues/21
+        'security/detect-object-injection': 0
     }
 }
