@@ -40,7 +40,7 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0"
   },
   "repository": {
     "type": "git",
