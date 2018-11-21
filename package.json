@@ -20,7 +20,7 @@
     "styleguide"
   ],
   "devDependencies": {
-    "release-it": "^7.4.7"
+    "release-it": "^8.0.0"
   },
   "dependencies": {
     "eslint": "^5.4.0",
