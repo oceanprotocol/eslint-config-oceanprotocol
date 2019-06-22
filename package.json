@@ -23,7 +23,7 @@
     "release-it": "^12.0.0"
   },
   "dependencies": {
-    "eslint": "^5.4.0",
+    "eslint": "^6.0.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
     "eslint-plugin-import": "^2.13.0",
