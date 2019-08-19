@@ -16,21 +16,24 @@ This cat clearly forgot to lint her JavaScript before deployment:
 
 Don't be like that cat.
 
-## Table of Contents
+**Table of Contents**
 
-  - [Usage](#usage)
-     - [React](#react)
-     - [Editor Plugins](#editor-plugins)
-  - [Rules](#rules)
-  - [Development](#development)
-  - [npm releases](#npm-releases)
-  - [License](#license)
+- [Usage](#usage)
+  - [React](#react)
+  - [Prettier](#prettier)
+  - [Editor Plugins](#editor-plugins)
+- [Rules](#rules)
+- [Development](#development)
+- [npm releases](#npm-releases)
+- [Changelog](#changelog)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
 ## Usage
 
-For every project containing JavaScript, ESLint should be set up with this config.
+For every project containing JavaScript, ESLint should be set up with this base setup.
 
 ```bash
 npm install --save-dev eslint eslint-config-oceanprotocol
@@ -49,7 +52,7 @@ Then, create a new file `.eslintrc` in the root of your project and fill with:
 When using within a React project use this to get set up:
 
 ```bash
-npm install --save-dev eslint eslint-config-oceanprotocol
+npm i -D eslint eslint-config-oceanprotocol
 ```
 
 And in your `.eslintrc`:
@@ -57,6 +60,33 @@ And in your `.eslintrc`:
 ```json
 {
   "extends": ["oceanprotocol", "oceanprotocol/react"]
+}
+```
+
+### Prettier
+
+Additionally, you should add [Prettier](https://prettier.io) to your project and work with it through ESLint:
+
+```bash
+npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+```
+
+Then add a `.prettierrc` file to the root of your project with this content:
+
+```json
+{
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+}
+```
+
+Finally, modify your `.eslintrc`:
+
+```json
+{
+  "extends": ["oceanprotocol", "prettier/standard", "plugin:prettier/recommended"],
+  "plugins": ["prettier"]
 }
 ```
 
@@ -105,11 +135,22 @@ npm test
 
 ## npm releases
 
-For a new **patch release**, execute on the machine where you're logged into your npm account:
+From a clean `master` branch you can run any release task doing the following:
 
-```bash
-npm run release
-```
+- bumps the project version in `package.json`, `package-lock.json`
+- auto-generates and updates the CHANGELOG.md file from commit messages
+- creates a Git tag
+- commits and pushes everything
+- creates a GitHub release with commit messages as description
+- Git tag push will trigger Travis to do a npm release
+
+Command is powered by [`release-it`](https://github.com/webpro/release-it) package, defined in the `package.json`. You can execute the script using arguments to bump the version accordingly:
+
+- To bump a patch version: `npm run release`
+- To bump a minor version: `npm run release minor`
+- To bump a major version: `npm run release major`
+
+For the GitHub releases steps a GitHub personal access token, exported as `GITHUB_TOKEN` is required. [Setup](https://github.com/release-it/release-it#github-releases)
 
 In case you have 2FA setup on npm.js, pass a code as One Time Password:
 
@@ -117,25 +158,13 @@ In case you have 2FA setup on npm.js, pass a code as One Time Password:
 npm run release --otp <yourcode>
 ```
 
-Command is powered by [`release-it`](https://github.com/webpro/release-it) package, defined in the `package.json`.
+## Changelog
 
-That's what the command does without any user interaction:
+See the [CHANGELOG.md](./CHANGELOG.md) file. This file is auto-generated during the above mentioned release process.
 
-- create release commit by updating version in `package.json`
-- create tag for that release commit
-- push commit & tag
-- create a new release on GitHub, with change log auto-generated from commit messages
-- publish to npm as a new release
+## Contributing
 
-If you want to create a **minor** or **major release**, use these commands:
-
-```bash
-npm run release-minor
-```
-
-```bash
-npm run release-major
-```
+See the page titled "[Ways to Contribute](https://docs.oceanprotocol.com/concepts/contributing/)" in the Ocean Protocol documentation.
 
 ## License
 

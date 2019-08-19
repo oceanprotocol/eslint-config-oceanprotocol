@@ -4,10 +4,10 @@
   "description": "ESLint configuration for all of Ocean Protocol's JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "eslint .",
-    "release": "./node_modules/release-it/bin/release-it.js --src.tagName='v%s' --github.release --npm.publish --non-interactive",
-    "release-minor": "./node_modules/release-it/bin/release-it.js minor --src.tagName='v%s' --github.release --npm.publish --non-interactive",
-    "release-major": "./node_modules/release-it/bin/release-it.js major --src.tagName='v%s' --github.release --npm.publish --non-interactive"
+    "test": "eslint --ignore-path .gitignore --ext .js .",
+    "format": "prettier --ignore-path .gitignore --write '**/*.js'",
+    "release": "release-it --non-interactive",
+    "changelog": "auto-changelog -p"
   },
   "author": "Ocean Protocol",
   "license": "Apache-2.0",
@@ -19,22 +19,40 @@
     "javascript",
     "styleguide"
   ],
-  "devDependencies": {
-    "release-it": "^12.0.0"
-  },
   "dependencies": {
-    "eslint": "^5.4.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-config-standard-react": "^7.0.2",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^9.0.0",
-    "eslint-plugin-promise": "^4.0.0",
-    "eslint-plugin-react": "^7.10.0",
+    "eslint": "^6.2.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-config-standard-react": "^8.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.0"
+  },
+  "devDependencies": {
+    "auto-changelog": "^1.15.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "release-it": "^12.3.5"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oceanprotocol/eslint-config-oceanprotocol.git"
+  },
+  "release-it": {
+    "hooks": {
+      "after:bump": "npm run changelog"
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": true
+    }
   }
 }
