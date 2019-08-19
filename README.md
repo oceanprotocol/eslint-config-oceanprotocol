@@ -16,15 +16,17 @@ This cat clearly forgot to lint her JavaScript before deployment:
 
 Don't be like that cat.
 
-## Table of Contents
+**Table of Contents**
 
-  - [Usage](#usage)
-     - [React](#react)
-     - [Editor Plugins](#editor-plugins)
-  - [Rules](#rules)
-  - [Development](#development)
-  - [npm releases](#npm-releases)
-  - [License](#license)
+- [Usage](#usage)
+  - [React](#react)
+  - [Editor Plugins](#editor-plugins)
+- [Rules](#rules)
+- [Development](#development)
+- [npm releases](#npm-releases)
+- [Changelog](#changelog)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
