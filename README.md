@@ -20,6 +20,7 @@ Don't be like that cat.
 
 - [Usage](#usage)
   - [React](#react)
+  - [Prettier](#prettier)
   - [Editor Plugins](#editor-plugins)
 - [Rules](#rules)
 - [Development](#development)
@@ -32,7 +33,7 @@ Don't be like that cat.
 
 ## Usage
 
-For every project containing JavaScript, ESLint should be set up with this config.
+For every project containing JavaScript, ESLint should be set up with this base setup.
 
 ```bash
 npm install --save-dev eslint eslint-config-oceanprotocol
@@ -51,7 +52,7 @@ Then, create a new file `.eslintrc` in the root of your project and fill with:
 When using within a React project use this to get set up:
 
 ```bash
-npm install --save-dev eslint eslint-config-oceanprotocol
+npm i -D eslint eslint-config-oceanprotocol
 ```
 
 And in your `.eslintrc`:
@@ -59,6 +60,33 @@ And in your `.eslintrc`:
 ```json
 {
   "extends": ["oceanprotocol", "oceanprotocol/react"]
+}
+```
+
+### Prettier
+
+Additionally, you should add [Prettier](https://prettier.io) to your project and work with it through ESLint:
+
+```bash
+npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+```
+
+Then add a `.prettierrc` file to the root of your project with this content:
+
+```json
+{
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+}
+```
+
+Finally, modify your `.eslintrc`:
+
+```json
+{
+  "extends": ["oceanprotocol", "prettier/standard", "plugin:prettier/recommended"],
+  "plugins": ["prettier"]
 }
 ```
 
