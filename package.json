@@ -4,7 +4,8 @@
   "description": "ESLint configuration for all of Ocean Protocol's JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "eslint .",
+    "test": "eslint --ignore-path .gitignore --ext .js .",
+    "format": "prettier --ignore-path .gitignore --write '**/*.js'",
     "release": "release-it --non-interactive",
     "changelog": "auto-changelog -p"
   },
@@ -31,6 +32,9 @@
   },
   "devDependencies": {
     "auto-changelog": "^1.15.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
     "release-it": "^12.3.5"
   },
   "repository": {
