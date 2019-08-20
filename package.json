@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-oceanprotocol",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "ESLint configuration for all of Ocean Protocol's JavaScript",
   "main": "index.js",
   "scripts": {
