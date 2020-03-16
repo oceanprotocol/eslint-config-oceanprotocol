@@ -35,7 +35,7 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.18.2",
-    "release-it": "^12.3.5"
+    "release-it": "^13.0.0"
   },
   "repository": {
     "type": "git",
