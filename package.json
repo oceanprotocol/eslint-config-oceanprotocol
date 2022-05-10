@@ -20,22 +20,23 @@
     "styleguide"
   ],
   "dependencies": {
-    "eslint": "^6.2.0",
-    "eslint-config-standard": "^14.0.0",
-    "eslint-config-standard-react": "^9.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint": "^8.15.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-standard": "^5.0.0"
   },
   "devDependencies": {
-    "auto-changelog": "^1.15.0",
-    "eslint-config-prettier": "^6.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^2.0.0",
-    "release-it": "^13.0.0"
+    "auto-changelog": "^2.4.0",
+    "prettier": "^2.6.2",
+    "release-it": "^15.0.0"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
   },
   "release-it": {
     "hooks": {
+      "before:init": "npm test",
       "after:bump": "npm run changelog"
     },
     "git": {
@@ -52,7 +54,7 @@
       "release": true
     },
     "npm": {
-      "publish": true
+      "publish": false
     }
   }
 }

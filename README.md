@@ -4,11 +4,10 @@
 
 > 💅 🦋 Shareable ESLint config for keeping JavaScript consistent across all of Ocean Protocol's projects, built upon [JavaScript Standard Style](https://github.com/standard/standard).
 
-[![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 [![npm](https://img.shields.io/npm/v/eslint-config-oceanprotocol.svg)](https://www.npmjs.com/package/eslint-config-oceanprotocol)
-[![Build Status](https://travis-ci.com/oceanprotocol/eslint-config-oceanprotocol.svg?branch=master)](https://travis-ci.com/oceanprotocol/eslint-config-oceanprotocol)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ef6a974bc0344ba39b378bf33a8dc689)](https://app.codacy.com/app/ocean-protocol/eslint-config-oceanprotocol?utm_source=github.com&utm_medium=referral&utm_content=oceanprotocol/eslint-config-oceanprotocol&utm_campaign=badger)
-[![Greenkeeper badge](https://badges.greenkeeper.io/oceanprotocol/eslint-config-oceanprotocol.svg)](https://greenkeeper.io/)
+[![Build Status](https://github.com/oceanprotocol/eslint-config-oceanprotocol/workflows/CI/badge.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol/actions)
+[![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-7b1173.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 This cat clearly forgot to lint her JavaScript before deployment:
 
@@ -24,10 +23,12 @@ Don't be like that cat.
   - [Editor Plugins](#editor-plugins)
 - [Rules](#rules)
 - [Development](#development)
-- [npm releases](#npm-releases)
+- [⬆️ Releases](#️-releases)
+  - [Production](#production)
+  - [Pre-Releases](#pre-releases)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
-- [License](#license)
+- [🏛 License](#-license)
 
 ---
 
@@ -75,9 +76,9 @@ Then add a `.prettierrc` file to the root of your project with this content:
 
 ```json
 {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none"
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none"
 }
 ```
 
@@ -85,7 +86,11 @@ Finally, modify your `.eslintrc`:
 
 ```json
 {
-  "extends": ["oceanprotocol", "prettier/standard", "plugin:prettier/recommended"],
+  "extends": [
+    "oceanprotocol",
+    "prettier/standard",
+    "plugin:prettier/recommended"
+  ],
   "plugins": ["prettier"]
 }
 ```
@@ -105,7 +110,7 @@ For maximum fun during coding, install an ESLint plugin in your favorite editor 
 
 We keep it simple and follow almost everything defined in the [JavaScript Standard Style](https://github.com/standard/standard). Only deviations are:
 
-- indentation: **4**
+- indentation: **2**
 - **no** space before function parenthesis
 - **double quotes** for jsx attributes
 - prefer destructuring from objects & arrays
@@ -133,30 +138,38 @@ Linting is setup against the actual rules within this repo so for testing new ru
 npm test
 ```
 
-## npm releases
+## ⬆️ Releases
 
-From a clean `master` branch you can run any release task doing the following:
+Releases are managed semi-automatically. They are always manually triggered from a developer's machine with release scripts.
+
+### Production
+
+From a clean `main` branch you can run the release task bumping the version accordingly based on semantic versioning:
+
+```bash
+npm run release
+```
+
+The task does the following:
 
 - bumps the project version in `package.json`, `package-lock.json`
 - auto-generates and updates the CHANGELOG.md file from commit messages
 - creates a Git tag
 - commits and pushes everything
 - creates a GitHub release with commit messages as description
-- Git tag push will trigger Travis to do a npm release
-
-Command is powered by [`release-it`](https://github.com/webpro/release-it) package, defined in the `package.json`. You can execute the script using arguments to bump the version accordingly:
-
-- To bump a patch version: `npm run release`
-- To bump a minor version: `npm run release minor`
-- To bump a major version: `npm run release major`
+- Git tag push will trigger a GitHub Action workflow to do a npm release
 
 For the GitHub releases steps a GitHub personal access token, exported as `GITHUB_TOKEN` is required. [Setup](https://github.com/release-it/release-it#github-releases)
 
-In case you have 2FA setup on npm.js, pass a code as One Time Password:
+### Pre-Releases
+
+For pre-releases, this is required for the first one like `v0.18.0-next.0`:
 
 ```bash
-npm run release --otp <yourcode>
+./node_modules/.bin/release-it major|minor|patch --preRelease=next
 ```
+
+Further releases afterwards can be done with `npm run release` again and selecting the appropriate next version, in this case `v0.18.0-next.1` and so on.
 
 ## Changelog
 
@@ -166,10 +179,10 @@ See the [CHANGELOG.md](./CHANGELOG.md) file. This file is auto-generated during 
 
 See the page titled "[Ways to Contribute](https://docs.oceanprotocol.com/concepts/contributing/)" in the Ocean Protocol documentation.
 
-## License
+## 🏛 License
 
 ```
-Copyright 2021 Ocean Protocol Ltd.
+Copyright ((C)) 2022 Ocean Protocol Foundation
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

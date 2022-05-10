@@ -1,4 +1,4 @@
 {
-  "extends": ["./index.js", "prettier/standard", "plugin:prettier/recommended"],
-  "plugins": ["prettier"]
+  "extends": ["./index.js"],
+  "plugins": ["prettier", "react"]
 }
