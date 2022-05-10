@@ -1,0 +1,27 @@
+name: 'Publish'
+
+on:
+  push:
+    tags:
+      - '**'
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+
+      # pre-releases, triggered by `next` as part of git tag
+      - run: npm publish --tag next
+        if: ${{ contains(github.ref, 'next') }}
+
+      # production releases
+      - run: npm publish
+        if: ${{ !contains(github.ref, 'next') }}
